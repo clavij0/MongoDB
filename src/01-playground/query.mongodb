@@ -1,3 +1,3 @@
-use ("sample_training")
+use ("sample_airbnb")
 
-db.zips.find({state: "NY"}).count()
+db.listingsAndReviews.find({bed_type: "Real Bed"})
