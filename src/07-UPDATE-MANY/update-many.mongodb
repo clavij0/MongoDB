@@ -1,0 +1,14 @@
+use("sample_training")
+
+db.zips.find({city: "CLEVELAND"})
+db.zips.updateOne(
+    //query
+    {city: "CLEVELAND"},
+    {zip: "56017"},
+    //update - operators
+    {
+        $inc:{
+            pop:1000
+        }
+    }
+)       
