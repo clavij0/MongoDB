@@ -1,0 +1,7 @@
+use("platzi_store")
+
+//using $eq
+//db.inventory.find({qty: 20})
+//db.inventory.find({qty:{$eq: 20}})
+
+//Busqueda en subobjeto

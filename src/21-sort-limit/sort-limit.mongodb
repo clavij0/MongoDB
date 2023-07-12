@@ -1,0 +1,8 @@
+use("sample_training")
+
+//db.zips.find({pop: {$gte: 100}})
+// 1= 0 -10 , A-Z ascendente
+//-1=10 -0 z-a Descendente
+db.zips
+    .find({pop: {$gte: 100}})
+    .sort({pop: 1})

@@ -1,0 +1,30 @@
+use("platzi_store")
+
+//$in puedo oobtener desde un array esos elementos
+//$in value & arrays BUSCA
+//db.inventory.find({qty: {$in: [20,25]}})
+//db.inventory.find({tags: {$in: ["book","electronics"]}})
+
+//$nin NO este dentro de la busqueda, contrario de nin
+//db.inventory.find({tags: {$nin: ["book","electronics"]}})
+
+//arrays
+//db.inventory.find({tags: "book"})
+//db.inventory.find({tags: ["school","book"]})
+//db.inventory.find({tags: ["book","school"]})
+//arrays $all busca los componentes book y school no importa el orden 
+//db.inventory.find({$all: ["book","school"]})
+
+//$size el tamaño del array debe de tener 2 elementos
+//db.inventory.find({tags:{$size:2}})
+
+//$elemMatch
+//db.survey.find({results: {$elemMatch:{product:"xyz"}}})
+db.survey.find({
+    results: {
+        $elemMatch:{
+            product:"xyz", 
+            score:{$gte:7}
+        }}
+    })
+
